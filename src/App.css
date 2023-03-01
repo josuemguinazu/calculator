@@ -1,38 +1,116 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&family=Roboto+Mono:ital,wght@0,600;1,300&display=swap');
+
+/* ! Calculadora */
+* {
+  font-family: 'Orbitron', sans-serif;
+}
+.title {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.CalculatorContainer {
+  background-color: rgba(255, 251, 245, 0.822);
+  border: 2px solid #81b29a;
+  margin: 2% auto;
+  width: 28%;
+  padding: 0.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.btn {
+  border: 1px solid salmon;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-bottom-left-radius: 18px;
+  border-top-right-radius: 18px;
+  transition: 0.3s;
+}
+.btn:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: rgb(170, 170, 255);
+  box-shadow: 1px 1px 4px 2px rgb(197, 197, 255);
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.resBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.res {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 40%;
+  border: 2px solid #e07a5f;
+  border-bottom-left-radius: 18px;
+  border-top-right-radius: 18px;
+  margin-bottom: 1%;
+  transition: 0.3s;
+}
+.res:hover {
+  cursor: pointer;
+  background-color: #ffb4a2;
+  transition: 0.3s;
+}
+.display {
+  margin-top: 2%;
+  border-bottom-left-radius: 18px;
+  border-top-right-radius: 18px;
+  width: 95%;
+  height: 4rem;
+  border: 2px solid #f4f1de;
+  background-color: #f3f2ea;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2%;
+}
+.operator {
+  background-color: ghostwhite;
+  border: 2px solid rgb(235, 235, 235);
+}
+.number {
+  background-color: rgb(255, 243, 243);
+  border: 2px solid rgb(204, 204, 204);
 }
 
-.App-link {
-  color: #61dafb;
+/* ! FOOTER */
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 2%;
+}
+.icon {
+  font-size: 3rem;
+  color: rgb(99, 99, 99);
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.icon:hover {
+  transform: scale(1.4);
+  opacity: 1;
+}
+.sign {
+  font-family: 'Orbitron', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 600px) {
+  .CalculatorContainer {
+    width: 92vw;
   }
 }
